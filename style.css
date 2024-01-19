@@ -68,7 +68,7 @@ ul{
 }
 
 li a.li-1{
-    display: block;
+    display: flex;
     padding: 12px;
     font-size: 15px;
     font-family: 'Ubuntu', sans-serif;
@@ -76,13 +76,14 @@ li a.li-1{
     list-style-type: none;
     text-decoration: none;
     color: black;
-    margin-right: 10px;
+    
     padding-top: 10px;
 }
 li a.li-1:hover{
     color: rgb(215, 78, 101);
     border: 2px solid black;
     border-radius: 10%;
+    flex-shrink: 1;
 }
 
 #home{
