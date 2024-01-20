@@ -1,25 +1,98 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: #161B40;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 html{
     scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/****** Navbar css starts ******/
+.header{
+    position: fixed;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 13vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+.logo-box{
+    display: flex;
+    align-items: center;
 }
 .logo{
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 600;
-    font-size: x-large;
-    text-decoration: none;
+    font-weight: 580;
+    font-size: 1.4em;
     color: #161B40;
-    padding: 24px 24px;
+    padding: 2em 1em;
+    text-decoration: dotted;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        color: rgb(214, 71, 95);
+        transform: scale(1.1);
+    }
+    @media all and (max-width: 1545px) {
+        font-size: 2.8em;
+    }
+    @media all and (min-width: 1545px) {
+        font-size: 3.4em;
+    }
 }
-a.logo:hover{
-    color: rgb(215, 78, 101);
-    border: 2px solid #161B40;
+.nav-menu{
+    display: flex;
+    gap: 2em;
+    padding: 0 2em;
 }
+li.nav-item{
+    list-style: none;
+    display: flex;
+    /** putting the display property can add the transform property for the &:hover effect*/
+}
+a.nav-link{
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 430;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    &:hover{
+        color: rgb(215, 78, 101);
+        transform: scale(1.1);
+    }
+    @media all and (max-width: 1545px) {
+        font-size: 1.5em;
+    }
+    @media all and (min-width: 1545px) {
+        font-size: 1.8em;
+    }
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 3.6em;
+    height: 0.5em;
+    margin: 0.5em auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: black;
+}
+/****** Navbar css ends ******/
+
 a.open:hover{
     background-color: aliceblue;
     color: black;
@@ -28,7 +101,8 @@ a.open:hover{
 }
 .box-flexbox:hover{
     box-shadow: 3px 3px 3px aliceblue;
-    transform: scale(1.06);
+    transform: scale(1.04);
+    transition: 0.5s;
 }
 .html:hover, .css:hover, .bjs:hover{
     box-shadow: 6px 6px 6px black;
@@ -38,125 +112,105 @@ a.open:hover{
     box-shadow: 3px 3px 3px black;
     transform: scale(1.06);
 }
-.box-head{
-    display: flex;
-    align-items: center;
-}
-.header{
-    position: fixed;
-    background-color: aliceblue;
-    width: 100%;
-    height: 75px;
-    z-index: 1000;
-}
-img{
-    height: 250px;
-    display: flex;
-    position: relative;
-    right: 150px;
-    justify-content: center;
-    align-items: center;
-}
-ul{
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    position: absolute;
-    left: 55%;
-    margin: 0%;
-    padding: 0%;
-}
 
-li a.li-1{
-    display: flex;
-    padding: 12px;
-    font-size: 15px;
-    font-family: 'Ubuntu', sans-serif;
-    font-style: normal;
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-    
-    padding-top: 10px;
-}
-li a.li-1:hover{
-    color: rgb(215, 78, 101);
-    border: 2px solid black;
-    border-radius: 10%;
-    flex-shrink: 1;
-}
+/****** Home css starts ******/
 
 #home{
     background-image: url(https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=920&q=80);
+
+    /**Full height and width*/
+    height: 100%;
+    width: 100%;
+
+    /** Center and scale the image nicely */
+    background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-.sec-1{
-    padding-left: 10%;
-    padding-right: 30%;    
+.home-contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
-
+.my-image img{
+    border-radius: 50%;
+    height: 35vh;
+    margin: 5em;
+}
+.my-description{
+    margin: 5em;
+    padding-right: 5em;
+    @media all and (max-width: 2546px ) {
+        margin-left: 12em; 
+        margin-top: 10em;
+    }
+}
 .h1{
     color: aliceblue;
-    font-size: 50px;
+    font-size: 4em;
     font-family: 'Tilt Neon', cursive;
+    
 }
-
-h1{
-    color: aliceblue;
-    font-size: 50px;
-    font-family: 'Tilt Neon', cursive;
+.h1 p{
+    
+    @media all and (max-width: 2546px) {
+        font-size: 12.2em;
+    }
+    @media all and (min-width: 1545px) {
+        font-size: 2em;
+    }
+    @media all and (max-width: 1545px) {
+        font-size: .7em;
+    }
 }
-.h2{
-    color: azure;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.cont-1{
+.about-me{
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: small;
+    font-size: 0.86em;
+    @media all and (max-width: 2546px) {
+        font-size: 3.2em;
+    }
+    @media all and (min-width: 1545px) {
+        font-size: 2.5em;
+    }
+    @media all and (max-width: 1545px) {
+        font-size: 1em;
+    }
 }
-.cont-2{
+.join-me-box{
     display: flex;
 }
-.cont-21{
+.join-me{
     color: aliceblue;
     font-family: 'Tilt Neon', cursive;
-    font-size: x-large;
+    font-size: 1.75em;
     font-weight: 600;
-    padding-right: 15px;
+    letter-spacing: 0.06em;
+    padding: 0 0.5em 0 0;
+    @media all and (min-width: 1545px) {
+        font-size: 3em;
+    }
+    @media all and (max-width: 1545px) {
+        font-size: 1.5em;
+    }
 }
 
 .material-symbols-outlined {
     color: aliceblue;
-    size:100px;
+    font-size: 32px;
 
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
-.material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
   'wght' 700,
-  'GRAD' 200,
-  'opsz' 48
+  'GRAD' 150,
+  'opsz' 40
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 700,
-  'GRAD' 200,
-  'opsz' 48
-}
+/****** Home css ends ******/
 
 #skills{
     background-color: #161B40;
@@ -303,7 +357,7 @@ hr:after{
     transition: 1s;
 }
 a{
-    text-decoration: none;
+    text-decoration: dotted;
     color: black;
 }
 .box-contact{
@@ -327,4 +381,68 @@ a{
 }
 .text-footer div{
     padding: 20%;
+}
+
+
+@media (max-width: 1275px) {
+
+
+    /****** Media queries for Hamburger ******/
+    .hamburger{
+        display: block;
+        margin-right: 4em;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(4){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(0.92em) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-1.1em) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 10%;
+        gap: 0;
+        flex-direction: column;
+        background-color: whitesmoke;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+    }
+    .nav-item{
+        margin: 1em 0;
+    }
+    .nav-menu.active{
+        left: 0;
+        text-align: center;
+    }
+
+    /****** Media queries for Home ******/
+    .home-contents{
+        flex-direction: column-reverse;
+    }
+    .my-image img{
+        height: 25em;
+    }
+    .h1{
+        font-size: 3.5em;
+        margin-top: 4em;
+    }
+    .about-me{
+        font-size: 1.5em;
+    }
+    .join-me{
+        font-size: 2.5em;
+    }
+    .material-symbols-outlined{
+        height: 4em;
+        width: 4em;
+    }
+
 }
