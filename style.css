@@ -6,13 +6,13 @@
 body{
     background-color: #161B40;
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
 }
 html{
     scroll-behavior: smooth;
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
 }
 
@@ -35,7 +35,7 @@ html{
 .logo{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 580;
-    font-size: 1.4em;
+    font-size: 1.0em;
     color: #161B40;
     padding: 2em 1em;
     text-decoration: dotted;
@@ -45,7 +45,7 @@ html{
         transform: scale(1.1);
     }
     @media all and (max-width: 1545px) {
-        font-size: 2.8em;
+        font-size: 1.8em;
     }
     @media all and (min-width: 1545px) {
         font-size: 3.4em;
@@ -84,9 +84,9 @@ a.nav-link{
 }
 .bar{
     display: block;
-    width: 3.6em;
-    height: 0.5em;
-    margin: 0.5em auto;
+    width: 2.2em;
+    height: 0.3em;
+    margin: 0.3em auto;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     background-color: black;
@@ -144,10 +144,10 @@ a.open:hover{
 .my-description{
     margin: 5em;
     padding-right: 5em;
-    @media all and (max-width: 2546px ) {
+    /* @media all and (max-width: 2546px ) {
         margin-left: 12em; 
         margin-top: 10em;
-    }
+    } */
 }
 .h1{
     color: aliceblue;
@@ -384,13 +384,16 @@ a{
 }
 
 
-@media (max-width: 1275px) {
+@media (max-width: 932px) {
 
 
     /****** Media queries for Hamburger ******/
+    .header{
+        height: 10vh;
+    }
     .hamburger{
         display: block;
-        margin-right: 4em;
+        margin-right: 2em;
     }
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
@@ -399,7 +402,7 @@ a{
         opacity: 0;
     }
     .hamburger.active .bar:nth-child(1){
-        transform: translateY(0.92em) rotate(45deg);
+        transform: translateY(0.5em) rotate(45deg);
     }
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-1.1em) rotate(-45deg);
@@ -428,21 +431,37 @@ a{
         flex-direction: column-reverse;
     }
     .my-image img{
-        height: 25em;
+        height: 10em;
     }
     .h1{
-        font-size: 3.5em;
+        font-size: 2.5em;
         margin-top: 4em;
     }
     .about-me{
-        font-size: 1.5em;
+        font-size: .5em;
     }
     .join-me{
-        font-size: 2.5em;
+        font-size: 1em;
     }
     .material-symbols-outlined{
         height: 4em;
         width: 4em;
     }
 
+    /****** Media queries for About section ******/
+    .flexbox{
+        flex-direction: column;
+    }
+
+    /****** Media queries for Skills section ******/
+    .html-and-css{
+        flex-direction: column;
+    }
+
+    /****** Media queries for Project section ******/
+    .project-section{
+        flex-direction: column;
+    }
+
+    
 }
