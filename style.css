@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: aliceblue;
+    background-color: rgb(12, 16, 35);
     height: 100%;
     /* width: 100%; */
     margin: 0;
@@ -198,45 +198,59 @@ a.nav-link{
 
 #about{
     margin: 4em;
+    background-color: rgb(12, 16, 35);
 }
 .about-heading{
-    text-align: center;
+    text-align: left;
 }
 .h1#about-heading{
-    margin-bottom: 0.75em;
-    color: #161B40;
+    margin-bottom: 0.1em;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
 }
 .h2 p{
     font-family: 'Poppins', sans-serif;
     font-size: 0.88em;
     font-weight: 560;
+    color: aliceblue;
+}
+p.facts {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88em;
+    font-weight: 560;
+    color: aliceblue;
+    margin-bottom: 4em;
 }
 .flexbox{
     display: flex;
     justify-content: space-evenly;
 }
 .box-flexbox{
-    border: 0.01em solid #161B40;
+    border: 0.01em solid aliceblue;
     border-radius: 3%;
-    height: 200px;
+    height: 15em;
     width: 320px;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 2%;
-    transition: 1s;
+    transition: .5s;
+    margin-bottom: 2em;
 }
 .box-flexbox:hover{
-    box-shadow: 3px 3px 3px aliceblue;
-    transform: scale(1.04);
+    box-shadow: .5em .5em aliceblue;
+    transform: translateY(-1em) translateX(-1em);
     transition: 0.5s;
+    color: #f00090;
 }
+/* .box-flexbox div:hover{
+    color: #f00090;
+} */
 .h3{
-    color: #161B40;
-    font-family: 'Cabin', sans-serif;
+    color: #f0f8ff;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
     font-size: 30px;
-    background-color: #f00090;
-    border: 1px solid #f00090;
     border-radius: 40%;
     height: 50px;
     width: 200px;
@@ -245,6 +259,7 @@ a.nav-link{
     display: flex;
     position: relative;
     bottom: 5%;
+    
 }
 #achieve{
     padding: 5px;
@@ -254,7 +269,7 @@ a.nav-link{
 }
 .edu-cont{
     font-family: 'Poppins', sans-serif;
-    color: #161B40;
+    color: aliceblue;
     font-size: large;
 }
 
@@ -262,7 +277,7 @@ a.nav-link{
 
 
 #skills{
-    background-color: #161B40;
+    background-color: rgb(12, 16, 35);
     padding-left: 10%;
 }
 .html-and-css{
@@ -312,16 +327,15 @@ a.nav-link{
 } 
 hr{
     border: none;
-    border-top: 3px double aliceblue;
+    border-top: .01em solid aliceblue;
     color: #F40058;
     overflow: visible;
     text-align: center;
     height: 5px;
+    margin-bottom: 1em;
+
 }
 hr:after{
-
-    content: '§';
-    padding: 0 4px;
     position: relative;
     top: -13px;
 }
