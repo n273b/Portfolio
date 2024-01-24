@@ -238,14 +238,12 @@ p.facts {
     margin-bottom: 2em;
 }
 .box-flexbox:hover{
-    box-shadow: .5em .5em aliceblue;
+    border: 0em;
+    box-shadow: .55em .55em #68d9fb;
     transform: translateY(-1em) translateX(-1em);
-    transition: 0.5s;
-    color: #f00090;
+    transition: 0.2s;
+    /* color: #f00090; */
 }
-/* .box-flexbox div:hover{
-    color: #f00090;
-} */
 .h3{
     color: #f0f8ff;
     font-family: 'Playfair Display', serif;
@@ -270,7 +268,8 @@ p.facts {
 .edu-cont{
     font-family: 'Poppins', sans-serif;
     color: aliceblue;
-    font-size: large;
+    font-size: 0.9em;
+    margin: 0.35em;
 }
 
 /************* About css ends *************/
@@ -493,6 +492,20 @@ a{
     .flexbox{
         flex-direction: column;
     }
+    .box-flexbox{
+        border: 0em;
+        box-shadow: .55em .55em #68d9fb;
+        transform: translateY(-1em) translateX(-1em);
+        transition: 0.2s;
+    }
+    .h3{
+        color: #f00090;
+        margin-top: 0.5em;
+    }
+    .box-flexbox{
+        margin-bottom: 2em;
+    }
+
 
     /****** Media queries for Skills section ******/
     .html-and-css{
