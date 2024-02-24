@@ -25,6 +25,11 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 //     headingAchievements.style.color = "#f0f8ff";
 // }))
 
+const spans = document.querySelectorAll('.text-animation span');
+spans.forEach((span, index) => {
+  span.style.setProperty('--index', index);
+});
+
 function changeColor(id, isMouseOver) {
 
     var h3Element = document.getElementById(id);
@@ -37,3 +42,25 @@ function changeColor(id, isMouseOver) {
             h3Element.style.color = ''; // Reset to default color
         }
 }
+
+const textAnimation = document.querySelector('.text-animation');
+const spanElements = textAnimation.querySelectorAll('span');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+spanElements.forEach(span => {
+  observer.observe(span);
+});
