@@ -19,7 +19,7 @@ html{
 /************* Navbar css starts *************/
 .header{
     position: fixed;
-    background-color: aliceblue;
+    background-color: #0b0f27;
     width: 100%;
     height: 13vh;
     z-index: 1000;
@@ -36,7 +36,7 @@ html{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 580;
     font-size: 1.0em;
-    color: #161B40;
+    color: aliceblue;
     padding: 2em 1em;
     text-decoration: dotted;
     transition: all 0.2s ease-in-out;
@@ -62,7 +62,7 @@ li.nav-item{
     /** putting the display property can add the transform property for the &:hover effect*/
 }
 a.nav-link{
-    color: black;
+    color: aliceblue;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 430;
     text-decoration: none;
@@ -274,11 +274,102 @@ p.facts {
 
 /************* About css ends *************/
 
-
+/************* Skills css starts *************/
 #skills{
+    margin: 4em;
+    margin-bottom: 1rem;
     background-color: rgb(12, 16, 35);
-    padding-left: 10%;
+    
 }
+.skills{
+    display: flex;
+    justify-content: space-around;
+}
+.details-container {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #0b0f27;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 2rem;
+}
+.experience-sub-title{
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+}
+.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.article-container {
+    display: flex;
+    text-align: center;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    gap: 1.85rem;
+    justify-content: space-around;
+}
+h3.text-article{
+    font-size: .7rem;
+    font-family: monospace;
+}
+.text-article{
+    display: inline-block;
+    width: 2.5rem;
+    text-align: center;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    /* width: 10rem; */
+    justify-content: space-around;
+    gap: 0.4rem;
+}
+article div{
+    display: flex;
+    flex-direction: row;
+}
+/************* Skills section css ends *************/
+
+/************* Projects section css starts *************/
+
+/* .text-animation span {
+    opacity: 0; Initially hide all letters
+    animation: fadeIn 1s forwards; Apply fadeIn animation to each letter
+    animation-delay: calc(0.5s * var(--index)); Delay each letter
+  } */
+
+  .text-animation span {
+    opacity: 0;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .text-animation span.animate {
+    animation: fadeIn 1s forwards;
+    animation-delay: calc(0.2s * var(--index));
+  }
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#projects{
+    margin: 4em;
+    margin-bottom: 1rem;
+}
+/* .h2{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: left;
+    color:aliceblue;
+} */
 .html-and-css{
     display: flex;
     justify-content: space-between;
@@ -332,7 +423,6 @@ hr{
     text-align: center;
     height: 5px;
     margin-bottom: 1em;
-
 }
 hr:after{
     position: relative;
@@ -510,6 +600,24 @@ a{
     /****** Media queries for Skills section ******/
     .html-and-css{
         flex-direction: column;
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .details-container{
+        margin: 1rem;
+    }
+    .article-container {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        
+        /* flex-direction: column; */
+        /* gap: 1.85rem;*/
+        justify-content: left;
     }
 
     /****** Media queries for Project section ******/
