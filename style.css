@@ -133,11 +133,10 @@ a.nav-link{
 .h1{
     color: aliceblue;
     font-size: 4em;
-    font-family: 'Tilt Neon', cursive;
-    
+    font-family: 'Poppins', sans-serif;    
 }
 .h1 p{
-    
+    color: aliceblue;
     @media all and (max-width: 2546px) {
         font-size: 12.2em;
     }
@@ -150,8 +149,7 @@ a.nav-link{
 }
 .about-me{
     color: aliceblue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.86em;
+    font-family: 'Poppins', sans-serif;
     @media all and (max-width: 2546px) {
         font-size: 3.2em;
     }
@@ -159,7 +157,8 @@ a.nav-link{
         font-size: 2.5em;
     }
     @media all and (max-width: 1545px) {
-        font-size: 1em;
+        font-size: 0.9em;
+        letter-spacing: normal;
     }
 }
 .join-me-box{
@@ -167,8 +166,7 @@ a.nav-link{
 }
 .join-me{
     color: aliceblue;
-    font-family: 'Tilt Neon', cursive;
-    font-size: 1.75em;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     letter-spacing: 0.06em;
     padding: 0 0.5em 0 0;
@@ -176,7 +174,7 @@ a.nav-link{
         font-size: 3em;
     }
     @media all and (max-width: 1545px) {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 }
 
@@ -208,7 +206,7 @@ a.nav-link{
     color: aliceblue;
     font-family: 'Poppins', sans-serif;
 }
-.h2 p{
+.p span{
     font-family: 'Poppins', sans-serif;
     font-size: 0.88em;
     font-weight: 560;
@@ -344,7 +342,7 @@ article div{
 
   .text-animation span {
     opacity: 0;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
   }
   
   .text-animation span.animate {
@@ -446,6 +444,10 @@ a.open:hover{
 a{
     text-decoration: dotted;
     color: black;
+}
+#contactus{
+    margin: 4em;
+    margin-bottom: 1rem;
 }
 .box-contact{
     padding: 5%;
