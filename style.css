@@ -377,44 +377,6 @@ article div{
     padding-right: 10%;
     padding-top: 5%;
 }
-.html{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
-    color: aliceblue;
-    background-color: #F40058;
-    padding: 5% 10%;
-    box-shadow: 10px 10px black;
-    transition: 1s;
-}
-.css{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
-    color: aliceblue;
-    background-color: #EFA500;
-    padding: 5% 10%;
-    box-shadow: 10px 10px black;
-    transition: 1s;
-}
-.div-bjs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 10%;
-
-}
-.bjs{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
-    color: aliceblue;
-    background-color: #41B853;
-    padding: 5% 10%;
-    box-shadow: 10px 10px black;
-    transition: 1s;
-}
-.html:hover, .css:hover, .bjs:hover{
-    box-shadow: 6px 6px 6px black;
-    transform: scale(1.06);
-} 
 hr{
     border: none;
     border-top: .01em solid aliceblue;
@@ -564,8 +526,8 @@ a{
         margin-top: 0;
     }
     .h1{
-        font-size: 3.8em;
-        margin-top: 3.5em;
+        font-size: 2.8em;
+        margin-top: 1.5em;
     }
     .about-me{
         font-size: .85em;
